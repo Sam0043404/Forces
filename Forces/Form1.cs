@@ -64,7 +64,7 @@ namespace Forces
             }
             catch
             {
-                // Shows an error if an error occurs
+                // Shows an message if an error occurs
                 MessageBox.Show("You numbers are wrong, check again");
             }
         }
