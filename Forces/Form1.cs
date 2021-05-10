@@ -18,28 +18,26 @@ namespace Forces
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            double sin(double x)
-            {
-                return (Math.Sin(x * Math.PI / 180.0));
-            }
-            double asin(double x)
-            {
-                return (Math.Asin(x) * 180 / Math.PI);
-            }
-            double cos(double x)
-            {
-                return (Math.Cos(x * Math.PI / 180.0));
-            }
-            double acos(double x)
-            {
-                return (Math.Acos(x) * 180 / Math.PI);
-            }
+        { 
             
-            
-
         }
 
+        double sin(double x)
+        {
+            return (Math.Sin(x * Math.PI/180.0));
+        }
+        double asin(double x)
+        {
+            return (Math.Asin(x) * 180/Math.PI);
+        }
+        double cos(double x)
+        {
+            return (Math.Cos(x * Math.PI/180.0));
+        }
+        double acos(double x)
+        {
+            return (Math.Acos(x) * 180/Math.PI);
+        }
         private void PictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -52,7 +50,14 @@ namespace Forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            double Force = double.Parse(textBox1.Text);
+            double Angle = double.Parse(textBox2.Text);
 
+            double Fx = Force * cos(Angle);
+            double Fy = Angle * sin(Angle);
+
+            label5.Text = "Fy = " + Fy;
+            label4.Text = "Fx = " + Fx;
         }
     }
 }
