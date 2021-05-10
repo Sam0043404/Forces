@@ -50,14 +50,23 @@ namespace Forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            double Force = double.Parse(textBox1.Text);
-            double Angle = double.Parse(textBox2.Text);
-
-            double Fx = Force * cos(Angle);
-            double Fy = Angle * sin(Angle);
-
-            label5.Text = "Fy = " + Fy;
-            label4.Text = "Fx = " + Fx;
+            try
+            {    
+                // Reads what text is in the force and angle textboxs
+                double Force = double.Parse(textBox1.Text);
+                double Angle = double.Parse(textBox2.Text);
+                //Inputs the numbers into the equation
+                double Fx = Force * cos(Angle);
+                double Fy = Angle * sin(Angle);
+                // Rewrites the answers into the label
+                label5.Text = "Fy = " + Fy;
+                label4.Text = "Fx = " + Fx;
+            }
+            catch
+            {
+                // Shows an error if an error occurs
+                MessageBox.Show("You numbers are wrong, check again");
+            }
         }
     }
 }
