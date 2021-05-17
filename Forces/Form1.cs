@@ -101,9 +101,12 @@ namespace Forces
         {
           try
             {
+                // The text box text is read and used as the radius
                 double SphereR = double.Parse(textBox3.Text);
-                double SSA = 4 * Math.PI * (SphereR * SphereR);
+                // This code works out the surface area and volume using the radius
+                double SSA = 4 * Math.PI * Math.Sqrt(SphereR);
                 double SV = 1.333333333333333333 * Math.PI * (SphereR * SphereR * SphereR);
+                // The surface area and volume are added onto the labels
                 label6.Text = "Surface area = " + SSA;
                 label7.Text = "Volume = " + SV;
             }
@@ -114,6 +117,128 @@ namespace Forces
             }
 
             
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                double ConeR = double.Parse(textBox4.Text);
+                double ConeL = double.Parse(textBox5.Text);
+                double ConeH = double.Parse(textBox6.Text);
+                double ConeSA = Math.PI * ConeR * (ConeR * (Math.Sqrt(ConeH * ConeH) * (ConeR * ConeR)));
+                double ConeV = Math.PI * (ConeR * ConeR) * (ConeH / 3);
+                label8.Text = "Surface area = " + ConeSA;
+                label9.Text = "Volume = " + ConeV;
+            }
+            catch
+            {
+                // Shows an message if an error occurs
+                MessageBox.Show("You numbers are wrong, check again");
+            }
+           
+        }
+
+        private void Label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                double CylinderR = double.Parse(textBox7.Text);
+                double CylinderH = double.Parse(textBox8.Text);
+                double CylinderSA = 2 * Math.PI * CylinderR * CylinderH + 2 * Math.PI * (CylinderR * CylinderR);
+                double CylinderV = Math.PI * (CylinderR * CylinderR) * CylinderH;
+                label13.Text = "Surface area = " + CylinderSA;
+                label14.Text = "Volume = " + CylinderV;
+            }
+            catch
+            {
+                // Shows an message if an error occurs
+                MessageBox.Show("You numbers are wrong, check again");
+            }
+        }
+
+        private void Label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double CubeL = double.Parse(textBox9.Text);
+                double CubeSA = 6 * (CubeL * CubeL);
+                double CubeV = CubeL * CubeL * CubeL;
+                label19.Text = "Surface area =" + CubeSA;
+                label20.Text = "Volume =" + CubeV;
+            }
+            catch
+            {
+                // Shows an message if an error occurs
+                MessageBox.Show("You numbers are wrong, check again");
+
+            }
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double CuboidL = double.Parse(textBox10.Text);
+                double CuboidW = double.Parse(textBox11.Text);
+                double CuboidH = double.Parse(textBox12.Text);
+                double CuboidSA = (2 * CuboidL * CuboidW) + (2 * CuboidL * CuboidH) + (2 * CuboidW * CuboidH);
+                double CuboidV = (CuboidW * CuboidH) * CuboidL;
+                label24.Text = "Surface area = " + CuboidSA;
+                label25.Text = "Volume = " + CuboidV; 
+            }
+            catch
+            {
+                // Shows an message if an error occurs
+                MessageBox.Show("You numbers are wrong, check again");
+            }
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label21_Click(object sender, EventArgs e)
+        {
+
         }
     }
          

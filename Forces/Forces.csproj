@@ -83,5 +83,20 @@
   <ItemGroup>
     <None Include="Resources\Cos Sin Tan.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sphere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cone.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cylinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cube.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuboid.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
