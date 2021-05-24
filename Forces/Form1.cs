@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,7 +104,7 @@ namespace Forces
                 // The text box text is read and used as the radius
                 double SphereR = double.Parse(textBox3.Text);
                 // This code works out the surface area and volume using the radius
-                double SSA = 4 * Math.PI * Math.Sqrt(SphereR);
+                double SSA = 4 * Math.PI * (SphereR * SphereR);
                 double SV = 1.333333333333333333 * Math.PI * (SphereR * SphereR * SphereR);
                 // The surface area and volume are added onto the labels
                 label6.Text = "Surface area = " + SSA;
@@ -125,9 +125,8 @@ namespace Forces
             {
 
                 double ConeR = double.Parse(textBox4.Text);
-                double ConeL = double.Parse(textBox5.Text);
-                double ConeH = double.Parse(textBox6.Text);
-                double ConeSA = Math.PI * ConeR * (ConeR * (Math.Sqrt(ConeH * ConeH) * (ConeR * ConeR)));
+                double ConeH = double.Parse(textBox5.Text);
+                double ConeSA = Math.PI * ConeR * (ConeR + (Math.Sqrt(ConeH * ConeH) + (ConeR * ConeR)));
                 double ConeV = Math.PI * (ConeR * ConeR) * (ConeH / 3);
                 label8.Text = "Surface area = " + ConeSA;
                 label9.Text = "Volume = " + ConeV;
