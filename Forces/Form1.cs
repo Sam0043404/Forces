@@ -126,7 +126,7 @@ namespace Forces
 
                 double ConeR = double.Parse(textBox4.Text);
                 double ConeH = double.Parse(textBox5.Text);
-                double ConeSA = Math.PI * ConeR * (ConeR + (Math.Sqrt(ConeH * ConeH) + (ConeR * ConeR)));
+                double ConeSA = Math.PI * ConeR * (ConeR + (Math.Sqrt(ConeH * ConeH + ConeR * ConeR)));
                 double ConeV = Math.PI * (ConeR * ConeR) * (ConeH / 3);
                 label8.Text = "Surface area = " + ConeSA;
                 label9.Text = "Volume = " + ConeV;
